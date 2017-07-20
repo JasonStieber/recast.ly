@@ -6,14 +6,14 @@ class App extends React.Component {
       videoPlaying: exampleVideoData[0]
     };
   }
-  
+
   handleClick(video) {
     this.setState({
       videoPlaying: video
     });
   }
-  
-  render() {  
+
+  render() {
     return (
       <div>
         <nav className="navbar">
@@ -26,7 +26,7 @@ class App extends React.Component {
             <VideoPlayer video={this.state.videoPlaying}/>
           </div>
           <div className="col-md-5">
-            <VideoList videos={this.state.videos} handleClick={this.handleClick}/>
+            <VideoList videos={this.state.videos} handleClick={this.handleClick.bind(this)}/>
           </div>
         </div>
       </div>
@@ -39,4 +39,4 @@ class App extends React.Component {
 // `var` declarations will only exist globally where explicitly defined
 window.App = App;
 
-// 
+//
