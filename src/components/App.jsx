@@ -8,7 +8,7 @@ class App extends React.Component {
     };
 
     this.handleClick = this.handleClick.bind (this);
-    this.handleSearch = this.handleSearch.bind (this)
+    this.handleSearch = this.handleSearch.bind (this);
   }
   
   handleClick(video) {
